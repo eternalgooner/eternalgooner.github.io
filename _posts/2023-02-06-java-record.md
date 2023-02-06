@@ -13,8 +13,8 @@ Java 14 brought `record`s to the language. These can be thought of as restricted
 - concise
 - immutable
 
-**Tip**
-Following one of the Functional Programming principles, using immutability instead of mutability where possible will help to reduce the chance of bugs and help ensure data validity 
+> Following one of Functional Programming's principles, using immutability instead of mutability where possible will help to reduce the chance of bugs and help ensure data validity.
+{: .prompt-tip }
 
 ## Define a record
 A `record` can be defined in 1 line of code like so:
