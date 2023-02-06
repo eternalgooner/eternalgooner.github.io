@@ -45,4 +45,5 @@ That operation collects the results and puts them into a map with 2 keys. A `tru
 }
 ```
 
+## Link to sample
 [Link to GitHub repo with sample](https://github.com/eternalgooner/java-samples/blob/main/src/main/java/java8/partitioningBy/PartitioningBy.java)

@@ -52,4 +52,5 @@ final Map<String, Set<Person>> collectSet = people.stream()
   .collect(groupingBy(Person::getCountry, toSet()));
 ```
 
+## Link to sample
 [Link to GitHub repo with sample](https://github.com/eternalgooner/java-samples/blob/main/src/main/java/java8/groupingBy/GroupingBy.java)
