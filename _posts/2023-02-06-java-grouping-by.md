@@ -7,6 +7,7 @@ tags: [java,group,grouping,stream,collectors]
 
 # Java Grouping By  
 
+## Why is it useful
 When we have a collection of objects and we want to group them based on a property then we can use the `groupingBy` method in the `Collectors` class.  
 Say we have a `Person` record like so:
 
@@ -14,6 +15,7 @@ Say we have a `Person` record like so:
 record Person(String name, String country, int age) {}
 ```
 
+## Dummy Data
 Let's create some dummy data and put it into a list
 
 ```java
@@ -25,6 +27,7 @@ Person ste = new Person("ste", "eng", 30);
 List<Person> people = List.of(bob, tom, kat, ste);
 ```
 
+## Grouping By
 To group the elements by country for example, the following stream operation can be used:
 
 ```java
@@ -42,6 +45,11 @@ That operation collects the results and puts them into a map, with the map keys 
 }
 ```
 
-This can be useful when we want to categorise objects into specific groups.
+## Return as Map of Sets
+If we would prefer the data structure returned to be a Set instead of the default List, we can pass in a Collector method for that like so:
+```java
+final Map<String, Set<Person>> collectSet = people.stream()
+  .collect(groupingBy(Person::getCountry, toSet()));
+```
 
 [Link to GitHub repo with sample](https://github.com/eternalgooner/java-samples/blob/main/src/main/java/java8/groupingBy/GroupingBy.java)
