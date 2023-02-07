@@ -13,7 +13,7 @@ Java 14 brought `record`s to the language. These can be thought of as restricted
 - concise
 - immutable
 
-> Following one of Functional Programming's principles, using immutability instead of mutability where possible will help to reduce the chance of bugs and help ensure data validity.
+> Trying to use one of Functional Programming's principles, immutability, this will help to reduce the chance of bugs and help ensure data validity.
 {: .prompt-tip }
 
 ## Define a record
