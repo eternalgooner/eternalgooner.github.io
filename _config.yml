@@ -21,7 +21,7 @@ timezone: Europe/Dublin
 
 title: Software Development Learnings                         # the main title
 
-tagline: A place to document learnings and insights while working with different kinds of tech   # it will display as the sub-title
+tagline: A place to document learnings, insights & experiences while working in software development   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
