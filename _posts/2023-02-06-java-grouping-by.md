@@ -5,8 +5,6 @@ categories: [Java,Streams]
 tags: [java,group,grouping,stream,collectors]
 ---
 
-# Java Grouping By  
-
 ## Why is it useful
 When we have a collection of objects and we want to group them based on a property then we can use the `groupingBy` method in the `Collectors` class.  
 Say we have a `Person` record like so:

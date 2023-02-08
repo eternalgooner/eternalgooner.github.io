@@ -5,8 +5,6 @@ categories: [Java,Record]
 tags: [java,record,immutable,data,dto]
 ---
 
-# Java Record  
-
 ## Why is it useful
 Java 14 brought `record`s to the language. These can be thought of as restricted classes which have the following characteristics/benefits:
 - data carriers

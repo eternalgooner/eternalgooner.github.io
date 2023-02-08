@@ -5,8 +5,6 @@ categories: [Java,Streams]
 tags: [java,partition,partitioning,stream,collectors]
 ---
 
-# Java Partitioning By  
-
 ## Why is it useful
 When we have a collection of objects and we want to separate them into 2 distinct categories of objects based on a predicate then we can use the `paritioningBy` method in the `Collectors` class. In instances where we only care when the predicate matches we can use `filter`. But if we care about the negative matches also and possibly need to process them, then `partitioningBy` is perfect.  
 
