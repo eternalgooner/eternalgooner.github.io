@@ -64,4 +64,4 @@ CompletableFuture.supplyAsync(() -> getDataFromDbTakes10Seconds())
 
 ## Link to sample
 A link to a working sample is available at the following link:  
-[Link to GitHub repo with sample](https://github.com/eternalgooner/java-samples/blob/main/src/main/java/java14/record/JavaRecord.java)
+[Link to GitHub repo with sample](https://github.com/eternalgooner/java-samples/blob/main/src/main/java/java8/completablefuture/CompletableFutureInSequenceApp.java)
