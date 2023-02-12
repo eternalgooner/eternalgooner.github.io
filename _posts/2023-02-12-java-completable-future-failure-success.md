@@ -21,12 +21,8 @@ Imagine we have a `CompletableFuture` that looks something like this:
 ```java
 public CompletableFuture<String> longRunningProcess() {
   return CompletableFuture.supplyAsync(() -> {
-    try {
-      // processing logic
-      throw new RuntimeException("exception in completable future");
-    } catch (InterruptedException e) {
-      throw new RuntimeException(e);
-    }
+    // processing logic
+    throw new RuntimeException("exception in completable future");
   });
 }
 ```
