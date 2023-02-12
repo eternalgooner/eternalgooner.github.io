@@ -1,5 +1,5 @@
 ---
-title: Java Completable Future With Interdependent Processes
+title: Java Completable Future Race
 date: 2023-02-12 18:00:00 +/-0000
 categories: [Java,CompletableFuture]
 tags: [java,future,completablefuture,async,concurrency,multithread,race]
