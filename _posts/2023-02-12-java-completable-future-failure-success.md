@@ -15,7 +15,7 @@ Java 8 brought `CompletableFuture`s to the language. This was an improvement on 
 {: .prompt-info }
 
 ## Sample Scenario
-Say we have a `CompletableFuture` and we want to be able to handle the success and failure scenarios. The `CompletableFuture` API allows easy handling of this.
+Say we have a `CompletableFuture` and we want to be able to handle the success and failure scenarios. The `CompletableFuture` API allows easy handling of this through 3 different approaches.
 
 Imagine we have a `CompletableFuture` that looks something like this:
 ```java
@@ -28,17 +28,43 @@ public CompletableFuture<String> longRunningProcess() {
 ```
 
 ## Handle Success And Failure Outcomes
-We can handle the success and failure outcomes like so:
+
+### Approach 1 - Handle
+We can call the `handle` method to gain access to the success and failure outcomes like so. Notice how we can recover and return a `String` result in the failure scenario:
 
 ```java
 longRunningProcess()
-        .handle((success, failure) -> {
+  .handle((success, failure) -> {
     if (success != null) {
-        // success logic with completable future output
+        System.out.println("we've received a str result so completable future succeeded");
     }
-    // failure logic with failure details
+    System.out.println("we've received an exception so completable future failed " + failure.getMessage());
+    return "recovered from failure";
+  });
+```
+
+### Approach 2 - When Complete
+We can call the `whenComplete` method to gain access to the success and failure outcomes like so. This approach is used when we don't need to transform the success or failure outputs:
+
+```java
+longRunningProcess()
+  .whenComplete((success, failure) -> {
+    if (success != null) {
+        System.out.println("we've received a str result so completable future succeeded");
+    }
+    System.out.println("we've received an exception so completable future failed " + failure.getMessage());
+  });
+```
+
+### Approach 3 - Exceptionally
+We can call the `exceptionally` method when we only care about accessing the failure output:
+
+```java
+longRunningProcess()
+  .exceptionally((failure) -> {
+    System.out.println("we've received an exception so completable future failed " + failure.getMessage());
     return null;
-});
+  });
 ```
 
 ## Link to sample
